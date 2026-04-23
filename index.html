@@ -4,36 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Finance Tracker</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="app-container">
-        <header class="app-header">
-            <h1>Finance Tracker</h1>
-        </header>
-        <main>
-            <section id="transaction-management">
-                <h2>Transactions</h2>
-                <!-- Transaction List and Form -->
-            </section>
-            <section id="charts">
-                <h2>Charts</h2>
-                <!-- Chart.js Visuals -->
-            </section>
-            <section id="budget-tracking">
-                <h2>Budget Tracking</h2>
-                <!-- Budget Tracker UI -->
-            </section>
-        </main>
-        <footer>
-            <p>© 2026 Finance Tracker</p>
-        </footer>
-    </div>
-    <script src="js/app.js"></script>
-    <script src="js/transactions.js"></script>
-    <script src="js/charts.js"></script>
-    <script src="js/api.js"></script>
-    <script src="js/notifications.js"></script>
-    <script src="js/storage.js"></script>
+    <header>
+        <h1>Finance Tracker</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#transactions">Transactions</a></li>
+            <li><a href="#charts">Charts</a></li>
+            <li><a href="#budget">Budget</a></li>
+            <li><a href="#notifications">Notifications</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section id="transactions">
+            <h2>Transactions</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Date</th>
+                        <th>Description</th>
+                        <th>Amount</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Transaction entries will go here -->
+                </tbody>
+            </table>
+            <form>
+                <input type="date" required>
+                <input type="text" placeholder="Description" required>
+                <input type="number" placeholder="Amount" required>
+                <button type="submit">Add Transaction</button>
+            </form>
+        </section>
+        <section id="charts">
+            <h2>Charts</h2>
+            <div id="chartContainer">
+                <!-- Charts will be rendered here -->
+            </div>
+        </section>
+        <section id="budget">
+            <h2>Budget</h2>
+            <form>
+                <input type="text" placeholder="Budget Description" required>
+                <input type="number" placeholder="Budget Amount" required>
+                <button type="submit">Set Budget</button>
+            </form>
+            <div id="budgetDisplay">
+                <!-- Budget details will be shown here -->
+            </div>
+        </section>
+        <section id="notifications">
+            <h2>Notifications</h2>
+            <div id="notificationList">
+                <!-- Notifications will appear here -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 Finance Tracker</p>
+    </footer>
+    <script src="scripts.js"></script>
 </body>
 </html>
